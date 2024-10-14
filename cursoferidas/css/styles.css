@@ -1,0 +1,77 @@
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+header {
+    height: 80px;
+}
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.header .logo img {
+    height: 80px;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 20px;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    padding: 10px;
+    background: var(--main-color);
+    border-radius: 8px;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.home {
+    height: 400px;
+    background: #fff;
+}
+
+.legislacao {
+    height: 400px;
+    background: blue;
+}
+
+.conteudo {
+    height: 400px;
+    background: rgb(139, 158, 121);
+}
+
+.instrutor {
+    height: 400px;
+    background: brown;
+}
+
+.contato {
+    height: 400px;
+    background: #fff;
+}
