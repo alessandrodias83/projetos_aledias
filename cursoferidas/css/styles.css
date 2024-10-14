@@ -223,6 +223,7 @@ header {
     padding: 2%;
     border-bottom: var(--border);
     list-style: none;
+    cursor: pointer;
 }
 
 .conteudo .dropbox p {
