@@ -22,6 +22,7 @@ header {
     left: 0;
     right: 0;
     z-index: 4;
+    border-bottom: var(--border);
 }
 
 .header .logo img {
@@ -52,19 +53,193 @@ header {
 }
 
 .home {
-    height: 400px;
+    margin-top: 80px;
+    background: #eee;
+}
+
+.home .titulo h1 {
+    color: var(--main-color);
+    font-size:34px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home .pagina-inicial {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home .pagina-inicial p {
+    color: var(--bg);
+}
+
+.home .pagina-inicial img {
+    height: 60vh;
+    border-radius: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.home .pagina-inicial .incial {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home .pagina-inicial .tipo-curso {
     background: #fff;
+    width: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.home .pagina-inicial .tipo-curso h2 {
+    font-size: 28px;
+    color: var(--main-color);
+}
+
+.home .pagina-inicial .tipo-curso a {
+    color:#000;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.home .pagina-inicial .tipo-curso a i {
+    color: var(--main-color);
+}
+
+.home .pagina-inicial .tipo-curso h3 {
+    color: var(--bg);
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.home .pagina-inicial .tipo-curso p {
+    font-size: 40px;
+    margin-top: 20px;
+    color: #12A661;
+    font-weight: bolder;
+}
+
+.home .pagina-inicial .tipo-curso button {
+    height: 60px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bolder;
+    background: #12A661;
+    color: #fff;
+}
+
+.home .pagina-inicial .tipo-curso button:hover {
+    background: #eee;
+    color: #12A661;
 }
 
 .legislacao {
-    height: 400px;
-    background: blue;
+    background-image: url(../images/sutura-1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
 }
+
+.legislacao .legis {
+    background: #000000a4;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.legislacao .legis h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+
+.legislacao .legis p {
+    color: var(--main-color);
+    font-size: 22px;
+}
+
+.legislacao .publico {
+    margin-top: 40px;
+    background: #003738b2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.legislacao .publico h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.legislacao .publico h3 {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+.legislacao .publico p {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+
 
 .conteudo {
     height: 400px;
     background: rgb(139, 158, 121);
 }
+
+.conteudo .dropbox {
+    width: 60%;
+    max-width: 600px;
+
+}
+
+.conteudo .dropbox summary {
+    background: var(--main-color);
+    padding: 2%;
+    border-bottom: var(--border);
+    list-style: none;
+}
+
+.conteudo .dropbox p {
+    background: var(--main-color);
+    padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .instrutor {
     height: 400px;
