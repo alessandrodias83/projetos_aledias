@@ -209,6 +209,8 @@ header {
 
 .conteudo {
     background: var(--bg);
+    display: flex;
+    gap: 20px;
 }
 
 .conteudo .conteudo-curso h2 {
@@ -264,9 +266,32 @@ header {
     height: 100px;
     padding: 10px;
 }
+.conteudo .more-info {
+    width: 50%;
+}
 
+.conteudo .more-info .img img {
+    height: 60%;
+    width: 60%;
+    border-radius: 10px;
+}
 
+.conteudo .more-info button {
+    height: 60px;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bolder;
+    background: #12A661;
+    color: #fff;
+}
 
+.conteudo .more-info button:hover {
+    background: #eee;
+    color: #12A661;
+}
 
 
 .instrutor {
