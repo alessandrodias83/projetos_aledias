@@ -295,11 +295,137 @@ header {
 
 
 .instrutor {
-    height: 400px;
-    background: brown;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-image: url(../images/sutura-7.jpg);
+    max-height: 650px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.instrutor .image-intructor {
+    width: 30%;
+    padding: 10px;
+}
+
+.instrutor .image-intructor img {
+    height: 30%;
+    border-radius: 5px;
+}
+
+.instrutor .more-info-instructor {
+    width: 70%;
+    padding: 10px;
+    
+}
+
+.instrutor .more-info-instructor .education {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.instrutor .more-info-instructor h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.instrutor .more-info-instructor h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.instrutor .more-info-instructor ul li {
+    list-style: none;
+    margin: 5px;
+}
+
+.instrutor .more-info-instructor .teacher {
+    background: #fff;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.instrutor .more-info-instructor h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.instrutor .more-info-instructor p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
 }
 
 .contato {
-    height: 400px;
+    max-height: 400px;
+    background: #eee;
+    display: flex;
+}
+
+.contato .mail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.contato .mail h1 {
+    font-size: 34px;
+    color: #12A661;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contato .mail form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.contato .mail form label {
+    font-size: 16px;
+
+}
+
+.contato .mail form input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contato .mail form textarea {
+    padding: 10px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.contato .mail form button {
+    font-size: 20px;
+    background: #12A661;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contato .mail form button:hover {
     background: #fff;
+    color: #12A661;
+}
+
+.contato .social-media{
+    width: 50%;
+   
+
+
+    background-color: aqua;
 }
