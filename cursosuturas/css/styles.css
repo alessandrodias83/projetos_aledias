@@ -1,9 +1,3 @@
-body {
-    height: 100vh;
-}
-section {
-    padding: 2rem 7%;
-}
 
 header {
     height: 80px;
@@ -51,25 +45,29 @@ header {
     color: var(--main-color);
 }
 
+/*Seção Home*/
+
 .home {
+    height: 100vh;
     margin-top: 80px;
     background: #eee;
 }
 
 .home .titulo h1 {
     color: var(--main-color);
-    font-size: 34px;
+    font-size: 40px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .home .pagina-inicial {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .home .pagina-inicial p {
     color: var(--bg);
+    margin: 0 20px;
 }
 
 .home .pagina-inicial img {
@@ -89,7 +87,8 @@ header {
 
 .home .pagina-inicial .tipo-curso {
     background: #fff;
-    width: 40%;
+    width: 35%;
+    margin-right: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -142,12 +141,15 @@ header {
     color: #12A661;
 }
 
+/*Seção legislação*/
+
+
 .legislacao {
     background-image: url(../images/sutura-1.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh !important;
+    height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -204,10 +206,37 @@ header {
     margin-top: 10px;
 }
 
+.legislacao .matricule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.legislacao .matricule a button{
+    width: 90vw;
+    height: 60px;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bolder;
+    background: #12A661;
+    color: #fff;
+}
+
+
+.legislacao .matricule a button:hover {
+    background: #eee;
+    color: #12A661;
+}
+
+/*Seção Conteúdo*/
 
 
 .conteudo {
     background: var(--bg);
+    height: 100%;
     display: flex;
     gap: 20px;
 }
@@ -270,6 +299,7 @@ header {
 }
 
 .conteudo .more-info .img img {
+    margin: 10px;
     height: 60%;
     width: 60%;
     border-radius: 10px;
@@ -292,13 +322,13 @@ header {
     color: #12A661;
 }
 
+/*Seção instrutor*/
 
 .instrutor {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
-    background-image: url(../images/sutura-7.jpg);
-    max-height: 650px;
+    background-image: url(../images/sutura-7.JPG);
+    height: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -312,7 +342,6 @@ header {
 }
 
 .instrutor .image-intructor img {
-    height: 30%;
     border-radius: 5px;
 }
 
@@ -362,8 +391,10 @@ header {
     text-align: justify;
 }
 
+/*Seção contato*/
+
 .contato {
-    max-height: 400px;
+    height: 100%;
     background: #eee;
     display: flex;
 }
@@ -455,3 +486,4 @@ header {
 .contato .payment p i {
     margin-bottom: 10px;
 }
+
