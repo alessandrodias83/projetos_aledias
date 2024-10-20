@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Bate Papo UOL</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="image">
+            <img src="image/logo1.png" alt="logo do bate papo uol">
+        </div>
+        <div class="icon">
+            <button class="participants-btn">
+                <ion-icon name="people-sharp" id="menu-icon" onclick="showMenu()"></ion-icon>
+            </button>
+        </div>
+
+        <div class="option-chat" id="option-chat">
+            <div class="contact-message">
+                <h2>Escolha um contato para enviar mensagem:</h2>
+                <a href="#"><ion-icon name="people-sharp"></ion-icon> Todos</a>
+                <a href="#"><ion-icon name="person-circle-sharp"></ion-icon> João</a>
+                <a href="#"><ion-icon name="person-circle-sharp"></ion-icon> Maria</a>
+            </div>
+            <div class="contact-visibily">
+                <h2>Escolha a visibilidade</h2>
+                <a href="#"><ion-icon name="lock-open-sharp"></ion-icon> Todos</a>
+                <a href="#"><ion-icon name="lock-open-sharp"></ion-icon> Reservadamente</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="messages" class="container">
+            <!-- As mensagens serão exibidas aqui -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="box-message">
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Escreva aqui...">
+                <p>Enviando para Todos (público)</p>
+            </div>
+            <div class="icon-footer">
+                <button onclick="sendMessage()">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+
+</html>
