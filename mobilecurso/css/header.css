@@ -23,12 +23,22 @@ header .navbar a {
 header #menu {
     display: flex;
     list-style: none;
-    gap: .5rem;
+    gap: 1rem;
 }
+
 
 header #menu a {
     display: block;
-    padding: .5rem;
+    padding: .8rem;
+    transition: .5s;
+    margin-right: 30px;
+}
+
+header #menu a:hover {
+    background: var(--terciary-color);
+    border-radius: 5px;
+    color: var(--dark-color);
+
 }
 
 header #btn-mobile {
@@ -36,10 +46,12 @@ header #btn-mobile {
 }
 
 @media (max-width: 600px) {
+    /* Botão hamburguer visível no mobile */
     header #btn-mobile {
         display: block;
     }
 
+    /* Menu mobile escondido inicialmente */
     header #menu {
         display: block;
         position: absolute;
@@ -55,7 +67,10 @@ header #btn-mobile {
         overflow-y: hidden;
     }
 
-    header #nav.active #menu {
+ 
+    /* Quando a navbar estiver com a classe active */
+    .navbar.active #menu {
+        
         height: calc(100vh - 70px);
         visibility: visible;
         overflow-y: auto;
@@ -64,23 +79,35 @@ header #btn-mobile {
     header #menu a {
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        transition: 0.5s;
     }
 
+    header #menu a:hover {
+      background: var(--terciary-color);
+      color: var(--dark-color);
+      border-radius: 5px;
+    }
+    
+
     header #btn-mobile {
+        margin-right: 10px;
         display: flex;
         padding: .5rem 1rem;
         font-size: 1rem;
         border: none;
         background-color: none;
+        
         cursor: pointer;
         gap: .5rem;
     }
 
+    /* Estilo para o ícone de hambúrguer */
     header #hamburger {
         display: block;
         border-top: 2px solid;
         width: 20px;
+        color: var(--dark-color);
     }
 
     header #hamburger::after, #hamburger::before {
@@ -94,15 +121,16 @@ header #btn-mobile {
         position: relative;
     }
 
-    header #nav.active #hamburger {
+    /* Quando o menu está ativo, transforma o ícone de hambúrguer */
+    .navbar.active #hamburger {
         border-top-color: transparent;
     }
 
-    header #nav.active #hamburger::before {
+    .navbar.active #hamburger::before {
         transform: rotate(135deg);
     }
 
-    header #nav.active #hamburger::after {
+    .navbar.active #hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
     }
