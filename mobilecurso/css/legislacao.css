@@ -1,0 +1,109 @@
+.legislacao {
+    background-image: url(../images/sutura-1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.legislacao .legis {
+    background: #000000a4;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.legislacao .legis h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.legislacao .legis p {
+    color: var(--main-color);
+    font-size: 22px;
+}
+
+.legislacao .publico {
+    margin-top: 40px;
+    background: #003738b2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.legislacao .publico h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.legislacao .publico h3 {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+.legislacao .publico p {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.legislacao .matricule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.legislacao .matricule a button{
+    width: 90vw;
+    height: 60px;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bolder;
+    background: #12A661;
+    color: #fff;
+}
+
+
+.legislacao .matricule a button:hover {
+    background: #eee;
+    color: #12A661;
+}
+
+@media (max-width: 600px) {
+
+    .legislacao .legis h2 {
+        font-size: 20px;
+    }
+
+    .legislacao .legis p {
+        color: var(--main-color);
+        font-size: 16px;
+    }
+    
+    .legislacao .publico {
+        margin-top: 10px;
+    }
+
+    .legislacao .publico h2 {
+        font-size: 20px;
+    }
+    
+
+    
+    .legislacao .publico p {
+        font-size: 16px;
+    }
+
+}

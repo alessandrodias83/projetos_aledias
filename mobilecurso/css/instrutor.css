@@ -1,0 +1,131 @@
+.instrutor {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../images/sutura-7.JPG);
+    height: 100vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.instrutor .image-intructor {
+    width: 30%;
+}
+
+.instrutor .image-intructor img {
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.instrutor .more-info-instructor {
+    width: 70%;
+    padding: 10px;
+    margin-top: 20px;
+    
+}
+
+.instrutor .more-info-instructor .education {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.instrutor .more-info-instructor h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.instrutor .more-info-instructor h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.instrutor .more-info-instructor ul li {
+    list-style: none;
+    margin: 5px;
+}
+
+.instrutor .more-info-instructor .teacher {
+    background: #fff;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.instrutor .more-info-instructor h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.instrutor .more-info-instructor p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    .instrutor  {
+        display: flex;
+        justify-content: space-between;
+    }
+    .instrutor .image-intructor {
+        width: 30%;
+    }
+    .instrutor .image-intructor img {
+        height: 70%;
+        width: 100%;
+    }
+
+    .instrutor .more-info-instructor {
+        width: 70%;
+        padding: 10px;
+        margin-top: 20px;
+
+    }
+
+    .instrutor .more-info-instructor .education {
+        width: 80%;
+    }
+    
+    .instrutor .more-info-instructor h1 {
+        font-size: 24px;
+    }
+    
+    .instrutor .more-info-instructor h2 {
+        font-size: 18px;
+    }
+
+    .instrutor .more-info-instructor .teacher {
+        width: 80%;
+    }
+    
+    .instrutor .more-info-instructor h3 {
+        font-size: 18px;
+    }
+    
+    .instrutor .more-info-instructor p {
+        font-size: 14px;
+
+    }
+    
+    @media (max-width: 600px) {
+
+        .instrutor  {
+            justify-content: center;
+        }
+        .instrutor .image-intructor {
+            display: none;
+        }
+
+        .instrutor .more-info-instructor .education {
+            width: 100%;
+        }
+
+        .instrutor .more-info-instructor .teacher {
+            width: 100%;
+        }
+    }
+}
