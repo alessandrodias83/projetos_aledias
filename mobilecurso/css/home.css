@@ -1,5 +1,5 @@
 .home {
-    height: 100%;
+    height: 100vh;
     background: var(--secundary-color);
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@
 @media (max-width: 600px) {
 
     .home {
-        height: 95%;
+        height: 100vh;
     }
 
     .home .titulo h1 {
@@ -137,10 +137,7 @@
         font-size: 1rem;
     }
 
-    .home .pagina-inicial .inicial img {
-        
-    }
-
+  
     .home .pagina-inicial .tipo-curso {
         width: 95%;
         height: 50%;
@@ -154,7 +151,7 @@
         display: inline-flex;
         margin: 5px;
         width: 90%;
-        height: 15vh;
+        height: 20vh;
         padding: 2px;
     }
 

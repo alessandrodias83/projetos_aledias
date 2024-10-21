@@ -1,0 +1,119 @@
+.contato {
+    height: 50vh;
+    background: #eee;
+    display: flex;
+}
+
+.contato .mail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.contato .mail h1 {
+    font-size: 34px;
+    color: #12A661;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contato .mail form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.contato .mail form label {
+    font-size: 16px;
+
+}
+
+.contato .mail form input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contato .mail form textarea {
+    padding: 10px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.contato .mail form button {
+    font-size: 20px;
+    background: #12A661;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.contato .mail form button:hover {
+    background: #fff;
+    color: #12A661;
+}
+
+.contato .pay {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato .social-media h2{
+    font-size: 34px;
+    color: #12A661;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contato .social-media i {
+    font-size: 28px;
+    margin-left: 10px;
+   padding: 10px;
+   border-radius: 50px;
+}
+
+.contato .payment h2{
+    color: #12A661;
+    margin-bottom: 20px;
+}
+
+.contato .payment p i,
+.contato .payment p {
+    font-size: 20px;
+}
+
+.contato .payment p i {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .contato  {
+        flex-direction: column;
+    }
+
+    .contato .mail {
+        width: 100%;
+    }
+
+    .contato .mail h1 {
+        font-size: 24px;
+    }
+    .contato .pay {
+        width: 100%;
+    }
+
+    .contato .social-media h2{
+        font-size: 24px;
+    }
+    .contato .payment h2{
+        margin-bottom: 16px;
+    }
+    
+
+}

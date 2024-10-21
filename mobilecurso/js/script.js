@@ -20,3 +20,12 @@ function toggleMenu() {
 
 // Adiciona o evento de clique no botão hamburguer
 btnMobile.addEventListener('click', toggleMenu);
+
+
+const dropbox = document.getElementsByClassName('contentBx');
+
+for (i = 0; i < dropbox.length; i++) {
+    dropbox[i].addEventListener('click', function() {
+        this.classList.toggle('active')
+    })
+}
