@@ -38,8 +38,6 @@ function notifyPresent() {
     .catch(error => console.error("Erro ao notificar presença", error));
 }
 
-const elementoQueQueroQueApareca = document.querySelector('#mensagem');
-elementoQueQueroQueApareca.scrollIntoView();
 
 // Carrega mensagens do servidor
 function loadMessages() {
