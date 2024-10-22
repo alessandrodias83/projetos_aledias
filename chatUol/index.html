@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-
     <title>Bate Papo UOL</title>
 </head>
 
@@ -15,26 +13,12 @@
 
     <header class="header">
         <div class="image">
-            <img src="image/logo1.png" alt="logo do bate papo uol">
+            <img src="image/logo1.png" alt="logo do bate-papo uol">
         </div>
         <div class="icon">
-            <button class="participants-btn">
-                <ion-icon name="people-sharp" id="menu-icon" onclick="showMenu()"></ion-icon>
+            <button class="participants-btn" onclick="toggleParticipantsPanel()">
+                <ion-icon name="people-sharp" id="menu-icon"></ion-icon>
             </button>
-        </div>
-
-        <div class="option-chat" id="option-chat">
-            <div class="contact-message">
-                <h2>Escolha um contato para enviar mensagem:</h2>
-                <a href="#"><ion-icon name="people-sharp"></ion-icon> Todos</a>
-                <a href="#"><ion-icon name="person-circle-sharp"></ion-icon> João</a>
-                <a href="#"><ion-icon name="person-circle-sharp"></ion-icon> Maria</a>
-            </div>
-            <div class="contact-visibily">
-                <h2>Escolha a visibilidade</h2>
-                <a href="#"><ion-icon name="lock-open-sharp"></ion-icon> Todos</a>
-                <a href="#"><ion-icon name="lock-open-sharp"></ion-icon> Reservadamente</a>
-            </div>
         </div>
     </header>
 
@@ -44,11 +28,31 @@
         </div>
     </main>
 
+    <!-- Painel de participantes -->
+    <div class="participants-panel" id="participants-panel">
+        <div class="contact-message">
+            <h2>Escolha um contato para enviar mensagem:</h2>
+            <ul id="participants"></ul>
+            <a href="#" onclick="selectRecipient('Everyone')">
+                <ion-icon name="people-sharp"></ion-icon> Todos
+            </a>
+        </div>
+        <div class="contact-visibily">
+            <h2>Escolha a visibilidade</h2>
+            <a href="#" onclick="setMessageType('public')">
+                <ion-icon name="lock-open-sharp"></ion-icon> Todos
+            </a>
+            <a href="#" onclick="setMessageType('private')">
+                <ion-icon name="lock-closed-sharp"></ion-icon> Reservadamente
+            </a>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="box-message">
             <div class="message-input">
                 <input type="text" id="messageInput" placeholder="Escreva aqui...">
-                <p>Enviando para Todos (público)</p>
+                <p id="recipient-test">Enviando para Todos (público)</p>
             </div>
             <div class="icon-footer">
                 <button onclick="sendMessage()">
@@ -58,10 +62,20 @@
         </div>
     </footer>
 
+    <!-- Scripts externos do Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- Script JS principal -->
     <script src="javascript/script.js"></script>
+
+    <!-- Função diretamente no HTML -->
+    <script>
+        function toggleParticipantsPanel() {
+            const panel = document.getElementById('participants-panel');
+            panel.classList.toggle('show');
+        }
+    </script>
 
 </body>
 

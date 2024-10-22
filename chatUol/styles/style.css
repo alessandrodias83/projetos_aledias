@@ -1,3 +1,4 @@
+/* Estilos para o cabeçalho */
 header {
     height: 80px;
     position: fixed;
@@ -26,41 +27,53 @@ header {
     margin-right: 20px;
     border: none;
     background: none;
+    cursor: pointer;
 }
 
-.header .option-chat {
+/* Inicialmente o painel de opções está oculto */
+.option-chat {
     display: none;
     height: 100vh;
     width: 100vw;
     position: fixed;
     top: 0;
     right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
 }
 
+/* Estilos para a parte da lista de contatos e visibilidade dentro do painel */
 .option-chat .contact-message,
 .option-chat .contact-visibily {
     background-color: #fff;
-    width: 100%;
+    width: 70%; /* 70% da tela, como solicitado */
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-}
-
-.option-chat::before {
-    content: '';
-    position: absolute;
+    position: fixed;
+    right: 0; /* O painel vai aparecer da direita */
     top: 0;
-    left: 0;
-    width: 30%;
+}
+
+/* Estilos para a transição do painel */
+.participants-panel {
+    position: fixed;
+    top: 0;
+    right: -70%; /* Inicialmente fora da tela */
+    width: 70%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
+    transition: right 0.3s ease; /* Transição suave ao abrir o painel */
+    z-index: 3;
 }
 
-.show-menu {
-    display: flex;
+/* Quando o painel estiver visível */
+.participants-panel.show {
+    right: 0; /* Move o painel para dentro da tela */
 }
 
+/* Estilos para links de participantes */
 .option-chat a {
     display: block;
     margin: 10px 0;
@@ -73,22 +86,26 @@ header {
     margin-right: 8px;
 }
 
+/* Estilos gerais para o contêiner de mensagens */
 .container {
     background: #f3f3f3;
     padding: 20px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 80px; /* Espaço para o header */
+    margin-bottom: 80px; /* Espaço para o footer */
     overflow-y: auto;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 160px); /* Altura dinâmica para evitar sobreposição */
 }
 
+/* Estilos para o rodapé */
 footer {
     height: 80px;
+    background: #fff;
     box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.3);
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 4;
 }
 
 footer .box-message {
@@ -157,14 +174,14 @@ footer .box-message .icon-footer ion-icon {
     background-color: #ffcccc;
 }
 
-.participants-panel {
+/* Exibe o fundo transparente ao abrir o painel */
+.option-chat::before {
+    content: '';
     position: absolute;
     top: 0;
-    right: -300px;
-    width: 300px;
+    left: 0;
+    width: 30%; /* Os 30% que serão transparentes */
     height: 100%;
-    background-color: white;
-    border-left: 1px solid #ccc;
-    transition: right 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
 }

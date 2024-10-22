@@ -2,6 +2,7 @@ const UUID = "3e3ba45d-0f81-41fa-88e5-5544e02fe5b3";
 let username = prompt("Enter your name:");
 let recipient = "Everyone";
 
+
 // Entra no chat
 function enterChat() {
     fetch(`https://mock-api.driven.com.br/api/v6/uol/participants/${UUID}`, {
@@ -36,6 +37,9 @@ function notifyPresent() {
     })
     .catch(error => console.error("Erro ao notificar presença", error));
 }
+
+const elementoQueQueroQueApareca = document.querySelector('#mensagem');
+elementoQueQueroQueApareca.scrollIntoView();
 
 // Carrega mensagens do servidor
 function loadMessages() {
@@ -97,25 +101,41 @@ function sendMessage() {
 // Carregar lista de participantes
 function loadParticipants() {
     fetch(`https://mock-api.driven.com.br/api/v6/uol/participants/${UUID}`)
-    .then(response => response.json())
-    .then(data => {
+      .then(response => response.json())
+      .then(data => {
         let participantList = document.getElementById("participants");
-        participantList.innerHTML = "";
-
+        participantList.innerHTML = ""; // Clear previous participants
+  
         data.forEach(participant => {
-            let li = document.createElement("li");
-            li.textContent = participant.name;
-            li.onclick = () => selectRecipient(participant.name);
-            participantList.appendChild(li);
+          let li = document.createElement("li");
+          li.textContent = participant.name;
+          li.onclick = () => selectRecipient(participant.name);
+          if (participant.name === recipient) {
+              li.classList.add('selected');
+          }
+          participantList.appendChild(li);
         });
-    })
-    .catch(error => console.error("Erro ao carregar participantes!", error));
+      })
+      .catch(error => console.error("Erro ao carregar participantes!", error));
 }
 
 // Seleciona destinatário
 function selectRecipient(name) {
     recipient = name;
     document.getElementById("recipient-test").textContent = `Enviando para: ${recipient}`;
+}
+
+// Atualiza o tipo de mensagem
+function updateMessageType() {
+    const messageType = document.getElementById("messageType").value;
+    recipient = messageType === "Everyone" ? "Everyone" : recipient;
+    document.getElementById("recipient-test").textContent = `Enviando para: ${recipient}`;
+}
+
+// Alterna a exibição do painel de participantes
+function toggleParticipants() {
+    const panel = document.getElementById("participants-panel");
+    panel.classList.toggle("show");
 }
 
 // Inicia o chat
