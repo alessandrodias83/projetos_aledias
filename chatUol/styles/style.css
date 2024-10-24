@@ -60,17 +60,66 @@ header {
 .participants-panel {
     position: fixed;
     top: 0;
-    right: -70%; /* Inicialmente fora da tela */
+    right: -70%;
     width: 70%;
     height: 100%;
     background-color: white;
-    transition: right 0.3s ease; /* Transição suave ao abrir o painel */
+    transition: right 0.3s ease;
     z-index: 5;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Quando o painel estiver visível */
 .participants-panel.show {
     right: 0; /* Move o painel para dentro da tela */
+}
+
+/* Overlay transparente */
+/* Ajuste no overlay transparente */
+.panel-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 4;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.panel-overlay.show {
+    display: block;
+}
+
+/* Estilos para as opções de contato e visibilidade */
+.contact-option, .visibility-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-info, .visibility-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icon {
+    color: #28BB25;
+    display: none;
+}
+
+.selected .check-icon {
+    display: block;
+}
+
+/* Estilo para mensagens */
+.message strong {
+    font-weight: bold;
 }
 
 .participants-panel .contact-message {
@@ -223,7 +272,11 @@ footer .box-message .icon-footer ion-icon {
 }
 
 .message.private {
-    background-color: #ffcccc;
+    background-color: #FFA07A; /* Cor de fundo salmão */
+    color: #000; /* Cor do texto */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 /* Exibe o fundo transparente ao abrir o painel */

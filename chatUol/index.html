@@ -32,19 +32,33 @@
     <div class="participants-panel" id="participants-panel">
         <div class="contact-message">
             <h2>Escolha um contato para enviar mensagem:</h2>
-            <a href="#">
-                <ion-icon name="people-sharp"></ion-icon> Todos
-            </a>
-            <ul id="participants"></ul>
+            <div class="contact-option" onclick="selectRecipient('Todos')">
+                <div class="contact-info">
+                    <ion-icon name="people-sharp"></ion-icon>
+                    <span>Todos</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
+            <ul id="participants">
+                <!-- Participantes serão inseridos aqui dinamicamente -->
+            </ul>
         </div>
         <div class="contact-visibily">
             <h2>Escolha a visibilidade</h2>
-            <a href="#" onclick="setMessageType('public')">
-                <ion-icon name="lock-open-sharp"></ion-icon> Todos
-            </a>
-            <a href="#" onclick="setMessageType('private')">
-                <ion-icon name="lock-closed-sharp"></ion-icon> Reservadamente
-            </a>
+            <div class="visibility-option" onclick="setMessageType('public')">
+                <div class="visibility-info">
+                    <ion-icon name="lock-open-sharp"></ion-icon>
+                    <span>Público</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
+            <div class="visibility-option" onclick="setMessageType('private')">
+                <div class="visibility-info">
+                    <ion-icon name="lock-closed-sharp"></ion-icon>
+                    <span>Reservadamente</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
         </div>
     </div>
 
