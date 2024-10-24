@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Bate Papo UOL</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="image">
+            <img src="image/logo1.png" alt="logo do bate-papo uol">
+        </div>
+        <div class="icon">
+            <button class="participants-btn" onclick="toggleParticipantsPanel()">
+                <ion-icon name="people-sharp" id="menu-icon"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="messages" class="container">
+            <!-- As mensagens serão exibidas aqui -->
+        </div>
+    </main>
+
+    <!-- Painel de participantes -->
+    <div class="participants-panel" id="participants-panel">
+        <div class="contact-message">
+            <h2>Escolha um contato para enviar mensagem:</h2>
+            <div class="contact-option" onclick="selectRecipient('Todos')">
+                <div class="contact-info">
+                    <ion-icon name="people-sharp"></ion-icon>
+                    <span>Todos</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
+            <ul id="participants">
+                <!-- Participantes serão inseridos aqui dinamicamente -->
+            </ul>
+        </div>
+        <div class="contact-visibily">
+            <h2>Escolha a visibilidade</h2>
+            <div class="visibility-option" onclick="setMessageType('public')">
+                <div class="visibility-info">
+                    <ion-icon name="lock-open-sharp"></ion-icon>
+                    <span>Público</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
+            <div class="visibility-option" onclick="setMessageType('private')">
+                <div class="visibility-info">
+                    <ion-icon name="lock-closed-sharp"></ion-icon>
+                    <span>Reservadamente</span>
+                </div>
+                <ion-icon name="checkmark-sharp" class="check-icon"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="box-message">
+            <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Escreva aqui...">
+                <p id="recipient-test">Enviando para Todos (público)</p>
+            </div>
+            <div class="icon-footer">
+                <button onclick="sendMessage()">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts externos do Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- Script JS principal -->
+    <script src="javascript/script.js"></script>
+
+    <!-- Função diretamente no HTML -->
+    <script>
+        function toggleParticipantsPanel() {
+            const panel = document.getElementById('participants-panel');
+            panel.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>
