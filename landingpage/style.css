@@ -149,7 +149,7 @@ span {
 }
 
 .social-icons a {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 4.5rem;
