@@ -624,6 +624,10 @@ span {
         grid-template-columns: repeat(2,1fr);
         margin: 0;
     }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
 }
 
 @media(max-width: 991px) {
@@ -633,6 +637,10 @@ span {
 
     section {
         padding: 10rem 3% 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
     }
 
     .timeline-items::before {
@@ -655,6 +663,10 @@ span {
 
     .services {
         padding-bottom: 7rem;
+    }
+
+    .curses .wrapper {
+        grid-template-columns: repeat(1,1fr);
     }
 
     .testimonials .wrapper {
@@ -699,9 +711,17 @@ span {
         color: #fff;
     }
 
+    .heading {
+        font-size: 5rem;
+    }
+
     .home {
         flex-direction: column-reverse;
         margin: 5rem 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
     }
 
     .home-content h3 {
