@@ -8,3 +8,5 @@ function Frase() {
 }
 
 export default Frase
+
+/*Este componente é reutilizavel, estou chamando ele no arquivo HelloWord.js */
