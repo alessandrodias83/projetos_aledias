@@ -1,7 +1,7 @@
-function Pessoa(nome, idade, profisao, foto) {
+function Pessoa({ nome, idade, profisao, foto }) {
     return (
         <div>
-            <img src={foto} alt={props.nome} />
+            <img src={foto} alt={nome} />
             <h2>Nome: {nome}</h2>
             <p>Idade: {idade}</p>
             <p>Profissão: {profisao}</p>
